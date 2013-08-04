@@ -1,0 +1,363 @@
+
+<!DOCTYPE html />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head>
+<title>Iyenger Engineers</title>
+<meta name="description" content="Use of javascript to add smooth scrolling to take user to different part on the same page, to make a go to top link, to scroll to div in same page." />
+<meta name="keywords" content="scroll to, jquery scroll to, scroll to div, javascript #links, scroll to different part of page, go to different part of page" />
+<style type="text/css">
+body   
+{
+    margin:0; padding:0;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color: #696969;
+	background:#eee url(img/map.jpg) repeat;
+}
+body,html{
+	/*overflow-y: scroll;
+	overflow-x: hidden;*/
+}
+
+#container{width:150%;}
+
+.box{width:30%; margin:5%;
+    border:2px solid #ddd;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;
+    background: rgba(128, 128, 128, 0.4);
+	padding:1em;
+    box-shadow:3px 3px 5px #C8D2C8;
+	float:left;
+}
+.fleft{float:left;}
+.clr{clear:both;}
+.inPadd{padding:20px;}
+
+.nav ul{margin:0; padding:0;}
+.nav ul li{list-style-type:none; float:left; margin:5px;}
+.nav ul li a{display:block; background: #ddd; padding:10px; text-decoratin:none; border:1px solid #ccc; box-shadow:3px 3px 5px #aaa;}
+
+.content {width:80%; padding:10%;}
+
+.info {width: 800px; margin: 10px; padding:10px; background:#ddd; color:#696969;}
+.info a{color:#444;}
+
+/* mine */
+div#nav_links{
+	position:fixed;	
+	left:1em;
+}
+div#nav_links{
+	display:inline-block;
+	border:1px solid red;	
+}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("a.js_onPageLink").bind("click", function (event) {
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+		var target = $(this).attr("href");
+		$("html, body").stop().animate({
+				scrollLeft: $(target).offset().left,
+				scrollTop: $(target).offset().top
+			}, 2200);
+	});
+});
+</script>
+
+<!-- media query -->
+<!-- change bg image -->
+<style>
+	@media screen and (max-width: 600px) {
+	  .box{
+			width:50%;
+		}
+	}
+	
+</style>
+<style>	
+	#ascrail2000, #ascrail2000-hr{
+		display:none;	
+	}
+</style>
+</head>
+<!--<body style='overflow:hidden; width:150em; height:100em;'>-->
+<body>
+
+<!--<div id="container" style='overflow:scroll; width:148em; height:100em;' 
+>
+-->	
+<div id="container">
+    
+    <div id="box1" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+		</div>
+	</div>
+	
+	<div id="box2" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+		</div>
+	</div>
+	
+	<div id="box3" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  ipsum lorem ipsum  ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+		</div>
+	</div>
+	
+	<div id="box4" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			
+		</div>
+	</div>
+	
+	<div id="box5" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			 ipsum lorem ipsum 
+			  ipsum lorem ipsum 
+			   ipsum lorem ipsum ipsum lorem ipsum 
+			  ipsum lorem ipsum 
+			   ipsum lorem ipsum ipsum lorem ipsum 
+			  ipsum lorem ipsum 
+			   ipsum lorem ipsum 
+		   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+		</div>
+	</div>
+	
+	<div id="box6" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			
+		</div>
+	</div>
+	
+	<div id="box7" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			
+		</div>
+	</div>
+	
+	<div id="box8" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+		</div>
+	</div>
+	
+	<div id="box9" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsu
+		</div>
+	</div>
+	
+	<div id="box10" class="box">
+		<div class="nav">
+			<ul>
+				<li><a class="js_onPageLink" href="#box1">1</a></li>
+				<li><a class="js_onPageLink" href="#box2">2</a></li>
+				<li><a class="js_onPageLink" href="#box3">3</a></li>
+				<li><a class="js_onPageLink" href="#box4">4</a></li>
+				<li><a class="js_onPageLink" href="#box5">5</a></li>
+				<li><a class="js_onPageLink" href="#box6">6</a></li>
+				<li><a class="js_onPageLink" href="#box7">7</a></li>
+				<li><a class="js_onPageLink" href="#box8">8</a></li>
+				<li><a class="js_onPageLink" href="#box9">9</a></li>
+				<li><a class="js_onPageLink" href="#box10">10</a></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="content">
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+		</div>
+	</div>
+<div style="clear:both;"></div>
+</div>
+
+<!-- hide scrollbars -->
+<script src="scrollbar/jquery.nicescroll.min.js"></script>
+        <script>
+			$("body").niceScroll();
+        </script>
+
+</body>
+</html>
